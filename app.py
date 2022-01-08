@@ -63,8 +63,7 @@ class ReviewMaterial:
     name: str = types.str.required
     phone_number: str = types.str.alnum.required
     id_number: str = types.str.length(18).required
-
-    
+    degree: str = types.uploader('image').str.url.required
     created_at: datetime = types.readonly.datetime.tscreated.required
     updated_at: datetime = types.readonly.datetime.tsupdated.required
 

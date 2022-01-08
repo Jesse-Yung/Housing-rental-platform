@@ -9,5 +9,21 @@
         "ts": {
             "url": "http://127.0.0.1:8000"
         }
+    },
+    "uploaders": {
+        "image": {
+            "client": "localfs",
+            "config": {
+                "dir": "images",
+                "url": "http://127.0.0.1:8000"
+            }
+        },
+        "doc": {
+            "client": "localfs",
+            "config": {
+                "dir": "docs",
+                "url": "http://127.0.0.1:8000"
+            }
+        }
     }
 }
