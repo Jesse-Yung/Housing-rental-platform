@@ -1,0 +1,13 @@
+# python
+__pycache__
+.env
+.venv
+
+.mypy_cache
+
+# editor
+.vscode
+
+# idea
+.idea
+*.iml
