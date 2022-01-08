@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: jsonclasses-pymongo
+Version: 3.2.0
+Summary: jsonclasses integration with pymongo
+Home-page: https://github.com/fillmula/jsonclasses-pymongo
+Author: Fillmula Inc.
+Author-email: victor.teo@fillmula.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# JSONClasses Pymongo
+JSONClasses integration with Pymongo.
+
+## Prerequisites
+
+To use this package, you should have `jsonclasses` and `pymongo` installed.
+
+## Installation
+
+Install `jsonclasses-pymongo` with `pip`.
+
+```sh
+pip install jsonclasses-pymongo
+```
+
+## Documentation
+
+[Read the Documentation](https://docs.jsonclasses.com)
+
+## License
+
+[MIT License](https://github.com/fillmula/jsonclasses-pymongo/blob/master/LICENSE)
+
+

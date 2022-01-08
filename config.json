@@ -1,0 +1,13 @@
+{
+    "pymongo": {
+        "url": "mongodb://localhost:27017/apartment-api"
+    },
+    "operator": {
+        "secretKey": "hdfkjs%&*hdfsdf"
+    },
+    "package": {
+        "ts": {
+            "url": "http://127.0.0.1:8000"
+        }
+    }
+}

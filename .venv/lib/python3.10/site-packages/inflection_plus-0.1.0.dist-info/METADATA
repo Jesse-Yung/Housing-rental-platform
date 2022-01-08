@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: inflection-plus
+Version: 0.1.0
+Summary: A test project using pybind11
+Home-page: https://github.com/fillmula/inflection-plus
+Author: Victor Teo
+Author-email: victor.teo@fillmula.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.10
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+UNKNOWN
+

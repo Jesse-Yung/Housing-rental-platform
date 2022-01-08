@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: jsonclasses-server
+Version: 3.2.0
+Summary: jsonclasses server
+Home-page: https://github.com/fillmula/jsonclasses-server
+Author: Fillmula Inc.
+Author-email: victor.teo@fillmula.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+JSONClasses Server
+==================
+
+Server integration for JSONClasses.
+
+## Supported Servers
+
+### Flask 2
+
+```python
+from jsonclasses_server import create_flask_server
+```
+
+### FastAPI
+
+```python
+from jsonclasses_server import create_fastapi_server
+```
+
+
