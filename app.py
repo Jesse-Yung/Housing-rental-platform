@@ -66,19 +66,13 @@ class User:
 
 @api
 @pymongo
-@jsonclass(
-    can_create=types.getop.isobjof('User'),
-    can_update=types.oneisvalid([
-        types.getop.isthis,
-        types.getop.isobjof('Admin')
-    ])
-    )
+@jsonclass
 class ReviewMaterial:
     id: str = types.readonly.str.primary.mongoid.required
-    author: User = types.objof('User').linkto
+    author: User = types.objof('User').asopd.linkto
     name: str = types.str.required
     phone_number: str = types.str.alnum.required
-    id_number: str = types.str.length(18).required
+    id_number: str = types.str.required
     degree: str = types.uploader('image').str.url.required
     certification: str = types.uploader('image').str.url.required
     account_information: str = types.uploader('image').str.url.required
