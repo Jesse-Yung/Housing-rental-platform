@@ -58,7 +58,7 @@ class User:
     phone_number: str = types.str.unique.authidentity.writenonnull.required
     password: str = types.str.writeonly.writenonnull.salt.authbycheckpw.unqueryable.required
     sex: Sex | None = types.enum(Sex).writeonce
-    house_levels: HouseLevel | None = types.enum(HouseLevel).canu(types.getop.isobjof('Admin'))
+    house_level: HouseLevel | None = types.enum('HouseLevel')
     review_material: ReviewMaterial | None = types.objof('ReviewMaterial').linkedby('author')
     created_at: datetime = types.readonly.datetime.tscreated.required
     updated_at: datetime = types.readonly.datetime.tsupdated.required
