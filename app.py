@@ -1,5 +1,6 @@
 from __future__ import annotations
 from datetime import datetime
+import email
 from enum import Enum
 from jsonclasses import jsonclass, jsonenum, types
 from jsonclasses_pymongo import pymongo
@@ -55,9 +56,11 @@ class Admin:
 class User:
     id: str = types.readonly.str.primary.mongoid.required
     username: str = types.str.authidentity.writenonnull
+    name: str =  types.str.required
     phone_number: str = types.str.unique.authidentity.writenonnull.required
     password: str = types.str.writeonly.writenonnull.salt.authbycheckpw.unqueryable.required
-    sex: Sex | None = types.enum(Sex).writeonce
+    sex: Sex | None = types.enum(Sex)
+    email: str | None = types.str.email
     house_level: HouseLevel | None = types.enum('HouseLevel')
     review_material: ReviewMaterial | None = types.objof('ReviewMaterial').linkedby('author')
     created_at: datetime = types.readonly.datetime.tscreated.required
@@ -90,5 +93,6 @@ class House:
     updated_at: datetime = types.readonly.datetime.tsupdated.required
 
 Admin(username="admin", password='123456').save()
+Admin(username="auditor", password='123456').save()
 
 app = server()
