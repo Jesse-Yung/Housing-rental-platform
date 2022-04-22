@@ -1,6 +1,5 @@
 from __future__ import annotations
 from datetime import datetime
-import email
 from enum import Enum
 from jsonclasses import jsonclass, jsonenum, types
 from jsonclasses_pymongo import pymongo
@@ -89,6 +88,23 @@ class ReviewMaterial:
 @jsonclass(can_create=types.getop.isobjof('Admin'))
 class House:
     id: str = types.readonly.str.primary.mongoid.required
+    title: str = types.str.required
+    type: str = types.str.required
+    location: str = types.str.required
+    area: int = types.int.required
+    price: int = types.int.required
+    level: int = types.int.required
+    pictures: list[str] = types.listof(str).required
+    created_at: datetime = types.readonly.datetime.tscreated.required
+    updated_at: datetime = types.readonly.datetime.tsupdated.required
+
+
+@api
+@pymongo
+@jsonclass(can_create=types.getop.isobjof('Admin'))
+class Picture:
+    id: str = types.readonly.str.primary.mongoid.required
+    url: str = types.uploader('image').str.url.required
     created_at: datetime = types.readonly.datetime.tscreated.required
     updated_at: datetime = types.readonly.datetime.tsupdated.required
 
